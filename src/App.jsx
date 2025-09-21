@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
-import { Dashboard } from './pages/dashboard';
+import { Dashboard } from './pages/Dashboard';
 import { OrderList } from './pages/OrderList';
 
 function App() {
