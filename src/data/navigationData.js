@@ -2,6 +2,8 @@
  export const COLORS = {
   primary: '#1F2937',
   secondary: '#9CA3AF',
+  lgreen: '#BAEDBD',
+  lblue:'#B1E3FF',
   blue: '#3B82F6',
   grey: '#D9D9D9',
   yellow: '#F59E0B',
@@ -169,20 +171,20 @@ export const PRODUCTS_DATA = [
   { name: 'Marco Shoes', price: '$79.49', quantity: '64', amount: '$1,965.81' }
 ];
 
-
 export const LOCATIONS_DATA = [
-  { city: 'New York', amount: '72K', country: 'us' },
-  { city: 'San Francisco', amount: '39K', country: 'us' },
-  { city: 'Sydney', amount: '25K', country: 'au' },
-  { city: 'Singapore', amount: '61K', country: 'my' }
+  { city: 'New York', amount: '72K', country: 'us', progress: 72 },
+  { city: 'San Francisco', amount: '39K', country: 'us', progress: 39 },
+  { city: 'Sydney', amount: '25K', country: 'au', progress: 25 },
+  { city: 'Singapore', amount: '61K', country: 'my', progress: 61 }
 ];
+
 
 
 export const SALES_BREAKDOWN = [
   { label: 'Direct', amount: '$300.56', color: COLORS.primary, percentage: 38.6 },
-  { label: 'Affiliate', amount: '$135.18', color: COLORS.grey, percentage: 21.9 },
-  { label: 'Sponsored', amount: '$154.02', color: COLORS.blue, percentage: 25.0 },
-  { label: 'E-mail', amount: '$48.96', color: COLORS.yellow, percentage: 14.5 }
+  { label: 'Affiliate', amount: '$135.18', color: COLORS.lgreen, percentage: 21.9 },
+  { label: 'Sponsored', amount: '$154.02', color: COLORS.lblue, percentage: 25.0 },
+  { label: 'E-mail', amount: '$48.96', color: COLORS.lines.blueDark, percentage: 14.5 }
 ];
 
 
@@ -230,6 +232,7 @@ export const CHART_DATA_CONFIG = {
       label: 'Previous Week (Dashed)',
       data: [null, null, null, 18, 22, 23],
       backgroundColor: 'transparent',
+      borderColor: COLORS.secondary,
       borderWidth: 3,
       borderDash: [8, 8],
       tension: 0.4,
@@ -237,8 +240,8 @@ export const CHART_DATA_CONFIG = {
     }
   ],
   legend: [
-    { label: 'Current Week', value: '$58,211', color: COLORS.lines.blue },
-    { label: 'Previous Week', value: '$68,768', color: COLORS.secondary }
+    { label: 'Current Week', value: '$58,211', color: COLORS.secondary},
+    { label: 'Previous Week', value: '$68,768', color: COLORS.lines.blue }
   ]
 }
 };
@@ -253,9 +256,9 @@ export const MAP_DATA = [
 
 export const TABLE_HEADERS = {
   products: [
-    { key: 'name', label: 'Name', align: 'left' },
-    { key: 'price', label: 'Price', align: 'left' },
-    { key: 'quantity', label: 'Quantity', align: 'left' },
+    { key: 'name', label: 'Name'},
+    { key: 'price', label: 'Price'},
+    { key: 'quantity', label: 'Quantity'},
     { key: 'amount', label: 'Amount', align: 'right' }
   ]
 };

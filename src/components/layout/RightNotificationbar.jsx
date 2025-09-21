@@ -32,7 +32,7 @@ export const RightNotificationBar = ({ isVisible, onClose, screenSize }) => {
 
   const renderActivityItem = (activity, index) => (
     <div key={index} className="flex items-start space-x-3 p-2 hover:bg-gray-50 dark:hover:bg-[#1C1C1C33] rounded-lg transition-colors">
-      <div className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0`}>
+      <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0`}>
         {activity.icon && 
           <Icon name={activity.icon} className="w-6 h-6" />
         }

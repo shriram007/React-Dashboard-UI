@@ -6,7 +6,7 @@ export const TopNavbar = ({ onMenuClick, onNotificationClick, screenSize, active
   const isMobile = screenSize === 'mobile';
   const isTablet = screenSize === 'tablet';
   const isDesktop = screenSize === 'desktop';
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { toggleDarkMode } = useDarkMode();
 
   const buttonClasses = "p-1.5 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 focus:outline-none hover:bg-gray-100 dark:hover:bg-[#1C1C1C33] rounded-lg transition-colors";
   const mobileButtonClasses = "p-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 focus:outline-none hover:bg-gray-100 dark:hover:bg-[#1C1C1C33] rounded-lg transition-colors";
@@ -106,7 +106,7 @@ export const TopNavbar = ({ onMenuClick, onNotificationClick, screenSize, active
 
               <div className="flex items-center space-x-2">
                 <button onClick={toggleDarkMode} className={mobileButtonClasses}>
-                  <Icon name={isDarkMode ? "moon" : "sun"} className="w-5 h-5" />
+                  <Icon name="sun" className="w-5 h-5" />
                 </button>
                 <button onClick={onNotificationClick} className={mobileButtonClasses}>
                   <Icon name="notification" className="w-5 h-5" />
@@ -124,7 +124,7 @@ export const TopNavbar = ({ onMenuClick, onNotificationClick, screenSize, active
                 <Icon name="search" className="w-5 h-5" />
               </button>
               <button onClick={toggleDarkMode} className={mobileButtonClasses}>
-                <Icon name={isDarkMode ? "moon" : "sun"} className="w-5 h-5" />
+                <Icon name="sun" className="w-5 h-5" />
               </button>
               <button onClick={onNotificationClick} className={mobileButtonClasses}>
                 <Icon name="notification" className="w-5 h-5" />
